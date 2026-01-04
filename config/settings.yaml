@@ -1,0 +1,14 @@
+# Global Configuration Settings
+
+# Rate limiting
+request_delay: 1.0  # Minimum delay between requests in seconds
+
+# Paths
+database_path: "./data/upeos.db"
+log_directory: "./logs"
+report_directory: "./reports"
+creport_registry: "./data/creports.json"
+
+# Flags
+enable_cloud_upload: true
+max_retries: 3

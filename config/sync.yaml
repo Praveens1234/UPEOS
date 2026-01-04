@@ -1,0 +1,16 @@
+# Sync Behavior and Freshness Rules
+
+# Data states
+data_states:
+  open: "OPEN"      # Data is actively changing
+  closing: "CLOSING" # Data may still change but less frequently
+  closed: "CLOSED"   # Data is finalized and will not change
+
+# Freshness thresholds (in hours)
+freshness_thresholds:
+  open: 1     # Re-sync every hour for open data
+  closing: 24 # Re-sync daily for closing data
+  closed: 168 # Re-sync weekly for closed data (7 days)
+
+# Default sync behavior
+default_sync_mode: "missing_only"  # Options: "missing_only", "stale_only", "full"
